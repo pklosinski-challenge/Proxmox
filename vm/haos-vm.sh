@@ -13,7 +13,7 @@ function header_info {
   / /_/ / __ \/ __ `__ \/ _ \   / /| | / ___/ ___/ / ___/ __/ __ `/ __ \/ __/  / / / /\__ \
  / __  / /_/ / / / / / /  __/  / ___ |(__  |__  ) (__  ) /_/ /_/ / / / / /_   / /_/ /___/ /
 /_/ /_/\____/_/ /_/ /_/\___/  /_/  |_/____/____/_/____/\__/\__,_/_/ /_/\__/   \____//____/
-
+PK EDITED
 EOF
 }
 header_info
@@ -141,7 +141,7 @@ function default_settings() {
   HN="haos$stable"
   CPU_TYPE=" -cpu host"
   CORE_COUNT="2"
-  RAM_SIZE="4096"
+  RAM_SIZE="3900"
   BRG="vmbr0"
   MAC="$GEN_MAC"
   VLAN=""
@@ -430,8 +430,7 @@ qm set $VMID \
   -scsi0 ${DISK1_REF},${DISK_CACHE}${THIN}size=16G \
   -boot order=scsi0 \
   -description "# Home Assistant OS
-### https://github.com/tteck/Proxmox
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D7EP4GF)" >/dev/null
+### https://github.com/tteck/Proxmox" >/dev/null
 msg_ok "Created HAOS VM ${CL}${BL}(${HN})"
 if [ "$START_VM" == "yes" ]; then
   msg_info "Starting Home Assistant OS VM"
